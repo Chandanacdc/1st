@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+.topnav {
+  overflow: hidden;
+  background-color: #80CCFF;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #CD853F;
+  color: black;
+}
+.form
+{
+  border:1px white;
+  border-radius: 20px;
+  width:500px;
+  height: 500px;
+background-color: #E0FFFF;
+
+background-image: 
+padding:25px;
+}
+/*.input{
+margin-top:100px; 	
+}*/
+.slc{
+	width: 40%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color:cornsilk;
+
+ 
+}
+.sb{
+	width: 20%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color:dodgerblue;
+
+}
+.jsp {
+  width: 90%;
+  padding: 10px;
+  margin: none;
+  box-sizing: border-box;
+  background-color:cornsilk;
+  
+}
+body{
+ background-image:url("img1.jpg"); 
+  background-repeat:no-repeat;
+  background-size: cover;
+
+}
+.content{
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 0px;
+  text-align: center;
+}
+
+.new{
+  color: red;
+}
+#foot{
+width:200px;
+border-radius: 25px;
+background-color: grey;
+height:20px;
+margin-top: 100px;
+text-align:center; 
+border-radius: 200px;
+  color: solid-black;
+}	
+
+	
+</style>
+<div class="topnav">
+  <a href="login.html">Login</a>
+  <a href="#news">Add Delivery Person</a>
+  <a href="#contact">View Delivery Persons</a>
+  <a href="#about">View Request</a>
+   <a href="#about">View </a>
+    <a href="#about">Logout </a>
+</div>
+<head>
+
+	<center><h1 style="color: black"> Welcome to Courier Management</h1></center>
+	
+	<link rel="stylesheet" type="text/css" href="regist.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="animation.js"></script>
+
+	<script type="text/javascript">
+
+		function validate(){
+		var name=document.myform.name.value;
+		var pass=document.myform.pass.value;  
+		var a=document.getElementById("optio");  
+		var admin=a.options[a.selectedIndex].value
+		if(name==null || name==""){
+		alert("name should not be null");
+		return false;
+	}
+	else if(pass.length<6)
+	{
+		alert("password should be greter than 6 characters");
+		return false;
+	}
+	
+	else if(admin==0)
+	{
+		alert("Please selesct");
+		return false
+
+	}
+	else if(admin==1)
+	{
+		window.open("admin.html")
+	}
+	else if(admin==2)
+	{
+		window.open("admin1.html")
+	}
+}
+	</script>
+</head>
+<center>
+<style type="text/css">
+	
+	</style>
+<body>
+
+
+	<div class="form">
+	<form name="myform" action=" " onsubmit="return validate()">
+
+
+		<div class="input">
+			<center><br><br><h2 style="color: black"> Login Page</h2></center>
+	<div class="content">
+			<i class="fa fa-user icon"></i>
+			<input type="text" class="jsp"  name="name" placeholder="User Name"/><br><br>
+			</div>
+<div class="content">
+	<i class="fa fa-key icon"></i>
+	<input type="password" class="jsp" name="pass" placeholder="Password"/><br><br>
+	</div>
+	
+	<select id="optio" class="slc"><font size="20">
+		<option value="0">select</option>
+		<option value="1"> Admin</option>
+		<option value="2">Student</option></font> 
+
+
+
+
+	</select><br>
+	<br>
+	<input  type="submit" class="sb" text-align="center" value="Login"/><br><br>
+	<div class="new">
+	New User
+	<a href="register1.html"> Click Here</a></div>
+</div>	
+</form>
+</div>
+</body>
+</center>
+
+
+</html>
